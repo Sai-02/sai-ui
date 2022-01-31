@@ -5,12 +5,6 @@ export default {
   component: Skeleton,
 };
 export const Primary = () => (
-  <Skeleton
-    variant={"circle"}
-    customStyles={{
-      width: "5rem",
-      height: "5rem",
-    }}
-  />
+  <Skeleton width="60" height="60" variant={"circle"} />
 );
 Primary.storyName = "Skeleton";

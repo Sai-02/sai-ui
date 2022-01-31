@@ -13,6 +13,7 @@
   background-size: 50px 200px;
   background-position: 0 0;
   animation: shine 1s infinite;
+  height: 1rem;
 }
 @keyframes shine {
   to {
