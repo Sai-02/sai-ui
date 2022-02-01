@@ -23,8 +23,10 @@
 .sui-skeleton-text {
   border-radius: 6px;
   height: 1rem;
+  width: 100%;
 }
 .sui-skeleton-rectangle {
+  border-radius: 5px;
 }
 .sui-skeleton-circle {
   border-radius: 50%;

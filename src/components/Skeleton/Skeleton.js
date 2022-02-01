@@ -2,20 +2,20 @@ import React from "react";
 import propTypes from "prop-types";
 import "./Skeleton.css";
 
-const Skeleton = ({ variant, customStyles, width, height }) => {
+const Skeleton = ({ variant, customStyles, width, height, customClasses }) => {
   return (
-    <div
-      className={`sui-skeleton 
-      ${variant == "text" ? "sui-skeleton-text" : ""} 
-      ${variant == "rectangle" ? "sui-skeleton-rectangle" : ""}
-      ${variant == "circle" ? "sui-skeleton-circle" : ""}
-      `}
+    <span
+      className={`sui-skeleton   ${
+        variant == "text" ? "sui-skeleton-text" : ""
+      }  ${variant == "rectangle" ? "sui-skeleton-rectangle" : ""} ${
+        variant == "circle" ? "sui-skeleton-circle" : ""
+      } ${customClasses === undefined ? "" : customClasses} `}
       style={{
-        width: width + "px",
-        height: height + "px",
+        width: width + "rem",
+        height: height + "rem",
         ...customStyles,
       }}
-    ></div>
+    ></span>
   );
 };
 Skeleton.propTypes = {
@@ -23,8 +23,9 @@ Skeleton.propTypes = {
     ["circle", "rectangle", "text"],
     propTypes.string
   ),
-  width: propTypes.string.isRequired,
+  width: propTypes.string,
   height: propTypes.string,
   customStyles: propTypes.object,
+  customClasses: propTypes.string,
 };
 export default Skeleton;
