@@ -2,11 +2,11 @@
   "name": "simple-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -28,18 +28,27 @@
     "@storybook/addon-links": "^6.4.14",
     "@storybook/react": "^6.4.14",
     "babel-loader": "^8.2.3",
+    "node-sass": "^7.0.1",
     "prop-types": "^15.8.1",
-    "rollup": "^2.66.1",
+    "rollup": "^2.67.0",
     "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {
+    "postcss": "^8.4.6",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+    "react-dom": "^17.0.2",
+    "rollup-plugin-jsx": "^1.0.3"
+  },
+  
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js"
+  
 }
