@@ -3,12 +3,10 @@ module.exports = {
   //   "../src/**/*.stories.mdx",
   //   "../src/**/*.stories.@(js|jsx|ts|tsx)"
   // ],
-  "stories": [
-    "../src/stories/Skeleton.stories.js"
- ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials"
+  stories: [
+    "../src/stories/Skeleton.stories.js",
+    "../src/stories/Modal.stories.js",
   ],
-  "framework": "@storybook/react"
-}
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  framework: "@storybook/react",
+};
