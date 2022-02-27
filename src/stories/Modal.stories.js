@@ -17,12 +17,24 @@ export const Primary = () => {
         Odio molestiae minus eius, amet asperiores reiciendis, doloremque
         deserunt quas aspernatur ut vitae consequatur magnam quis facere!
       </p>
-      <Modal open={shouldOpenModal}>
-        <div className="" style={{
-          padding:"2rem"
-        }}>
-          <div className="">
-            This is  my modal
+      <Modal
+        open={shouldOpenModal}
+        customStyles={{
+        }}
+      >
+        <div
+          className=""
+          style={{
+            padding: "1rem",
+          }}
+        >
+          <div
+            className=""
+            style={{
+              padding: "0 4rem",
+            }}
+          >
+            This is my modal that is very simple
           </div>
           <button
             onClick={() => {
