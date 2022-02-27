@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sai-02/Simple-UI.git"
+    "url": "git+https://github.com/Sai-02/sai-ui.git"
   },
   "author": "Sai Prashant Saxena",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sai-02/Simple-UI/issues"
+    "url": "https://github.com/Sai-02/sai-ui/issues"
   },
-  "homepage": "https://github.com/Sai-02/Simple-UI#readme",
+  "homepage": "https://github.com/Sai-02/sai-ui#readme",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@rollup/plugin-commonjs": "^21.0.1",
