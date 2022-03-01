@@ -1,6 +1,7 @@
 import React from "react";
 import "./Modal.css";
 import propTypes from "prop-types";
+import { useEffect } from "react";
 
 const Modal = ({
   children,
@@ -8,7 +9,13 @@ const Modal = ({
   customStyles,
   customClasses,
   backgroundColor,
+  fullScreen,
+  backgroundScroll,
 }) => {
+  useEffect(() => {
+    if (open && !backgroundScroll) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [open, backgroundScroll]);
   return (
     <div
       className="sai-modal-container"
@@ -23,8 +30,10 @@ const Modal = ({
       <div
         className={`sai-modal-component ${
           customClasses === undefined ? "" : customClasses
-        }`}
+        } `}
         style={{
+          width: fullScreen ? "100vw" : "",
+          height: fullScreen ? "100vh" : "",
           ...customStyles,
         }}
       >
@@ -35,6 +44,8 @@ const Modal = ({
 };
 Modal.propTypes = {
   open: propTypes.bool,
+  fullScreen: propTypes.bool,
+  backgroundScroll: propTypes.bool,
   customStyles: propTypes.object,
   customClasses: propTypes.string,
   backgroundColor: propTypes.string,

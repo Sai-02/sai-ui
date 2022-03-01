@@ -9,7 +9,12 @@ export const Primary = () => {
   const [shouldOpenModal, setShouldOpenModal] = useState(false);
   return (
     <div className="">
-      <p className="">
+      <p
+        className=""
+        style={{
+          height: "100vh",
+        }}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
         dolore repellat voluptatem minus reiciendis tenetur harum, autem
         corporis sunt ad delectus eaque rem nostrum saepe aliquid nihil eveniet
@@ -17,11 +22,7 @@ export const Primary = () => {
         Odio molestiae minus eius, amet asperiores reiciendis, doloremque
         deserunt quas aspernatur ut vitae consequatur magnam quis facere!
       </p>
-      <Modal
-        open={shouldOpenModal}
-        customStyles={{
-        }}
-      >
+      <Modal open={shouldOpenModal} customStyles={{}} backgroundScroll={true}>
         <div
           className=""
           style={{
