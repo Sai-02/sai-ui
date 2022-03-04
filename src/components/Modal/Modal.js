@@ -1,8 +1,8 @@
 import React from "react";
 import "./Modal.css";
 import propTypes from "prop-types";
-import { useEffect } from "react";
-
+import { useEffect, useRef } from "react";
+import { useOnClickOutside } from "../../customHooks/useOnClickOutside";
 const Modal = ({
   children,
   open,
@@ -11,11 +11,15 @@ const Modal = ({
   backgroundColor,
   fullScreen,
   backgroundScroll,
+  onClose,
+  closeOnFocusRemove,
 }) => {
+  const modalRef = useRef();
   useEffect(() => {
     if (open && !backgroundScroll) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
   }, [open, backgroundScroll]);
+  useOnClickOutside(modalRef, onClose,closeOnFocusRemove);
   return (
     <div
       className="sai-modal-container"
@@ -36,6 +40,7 @@ const Modal = ({
           height: fullScreen ? "100vh" : "",
           ...customStyles,
         }}
+        ref={modalRef}
       >
         {children}
       </div>
@@ -49,5 +54,6 @@ Modal.propTypes = {
   customStyles: propTypes.object,
   customClasses: propTypes.string,
   backgroundColor: propTypes.string,
+  onClose: propTypes.func,
 };
 export default Modal;

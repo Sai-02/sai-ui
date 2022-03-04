@@ -7,6 +7,9 @@ export default {
 };
 export const Primary = () => {
   const [shouldOpenModal, setShouldOpenModal] = useState(false);
+  const onClose = () => {
+    setShouldOpenModal(false);
+  };
   return (
     <div className="">
       <p
@@ -22,7 +25,13 @@ export const Primary = () => {
         Odio molestiae minus eius, amet asperiores reiciendis, doloremque
         deserunt quas aspernatur ut vitae consequatur magnam quis facere!
       </p>
-      <Modal open={shouldOpenModal} customStyles={{}} backgroundScroll={true}>
+      <Modal
+        open={shouldOpenModal}
+        customStyles={{}}
+        backgroundScroll={true}
+        onClose={onClose}
+        closeOnFocusRemove={true}
+      >
         <div
           className=""
           style={{
