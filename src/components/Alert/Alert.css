@@ -1,0 +1,10 @@
+.sui-alert-component {
+  padding: 0.6rem 0.7rem;
+  width: 50vw;
+  border-radius: 5px;
+  top: 2rem;
+  position: fixed;
+  z-index: 999;
+  background-color: rgb(255, 224, 224);
+  color: rgb(95, 33, 32);
+}
