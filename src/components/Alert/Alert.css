@@ -1,3 +1,8 @@
+.sui-alert-component-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .sui-alert-component {
   padding: 0.6rem 0.7rem;
   width: 50vw;
@@ -5,6 +10,12 @@
   top: 2rem;
   position: fixed;
   z-index: 999;
-  background-color: rgb(255, 224, 224);
+  /* background-color: rgb(255, 224, 224);
+  background-color: rgb(247, 232, 212);
+  background-color: rgb(215, 234, 241);
+  background-color: rgb(237, 247, 237);
   color: rgb(95, 33, 32);
+  color: rgb(102, 60, 0);
+  color: rgb(5, 73, 104);
+  color: rgb(26, 82, 28); */
 }

@@ -31,7 +31,12 @@ export const Primary = () => {
       >
         click
       </button>
-      <Alert open={open} text={"Hihdewkdfewkfekf"} closeAlert={closeAlert} />
+      <Alert
+        open={open}
+        text={"It is an alert"}
+        closeAlert={closeAlert}
+        type="red"
+      />
     </div>
   );
 };
