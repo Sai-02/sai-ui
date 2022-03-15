@@ -35,7 +35,7 @@ export const Primary = () => {
         open={open}
         text={"It is an alert"}
         closeAlert={closeAlert}
-        type="red"
+        type="success"
       />
     </div>
   );
