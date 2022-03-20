@@ -1,25 +1,21 @@
 .sui-alert-component-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
 }
 .sui-alert-component {
+  margin-top: 2rem;
   padding: 0.8rem 0.7rem;
   width: 50vw;
   border-radius: 5px;
-  top: 2rem;
-  position: fixed;
-  z-index: 999;
   display: flex;
   gap: 1rem;
   background-color: rgb(243, 226, 226);
-  /* background-color: rgb(247, 232, 212); */
-  /* background-color: rgb(215, 234, 241); */
-  /* background-color: rgb(237, 247, 237); */
-  /* color: rgb(95, 33, 32); */
-  /* color: rgb(87, 60, 23); */
-  /* color: rgb(37, 79, 99); */
-  /* color: rgb(47, 126, 50); */
 }
 
 .sui-error-alert-icon {

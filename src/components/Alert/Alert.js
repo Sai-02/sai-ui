@@ -74,12 +74,15 @@ const Alert = ({
     );
   };
   return (
-    <div className="sui-alert-component-container">
+    <div
+      className="sui-alert-component-container"
+      style={{
+        display: !open ? "none" : "",
+      }}
+    >
       <div
         className="sui-alert-component"
         style={{
-          display: !open ? "none" : "",
-          top: "2rem",
           backgroundColor: getBGColor(),
           color: getTextColor(),
           ...customStyles,
