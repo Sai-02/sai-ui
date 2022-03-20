@@ -85,7 +85,7 @@ const Alert = ({
           ...customStyles,
         }}
       >
-        {customIcon === undefined ? <> {getIcon()}</> : <>{customIcon}</>}
+        {customIcon === undefined ? <> {getIcon()} </> : <> {customIcon} </>}
         <div className="">{children}</div>
       </div>
     </div>

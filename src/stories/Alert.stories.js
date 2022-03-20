@@ -37,15 +37,7 @@ export const Primary = () => {
       >
         click
       </button>
-      <Alert
-        open={open}
-        closeAlert={closeAlert}
-        type="info"
-        duration={2000}
-        iconStyles={{
-          fontSize: "1rem",
-        }}
-      >
+      <Alert open={open} closeAlert={closeAlert} type="success" duration={1000}>
         It is a good alert
       </Alert>
     </div>
