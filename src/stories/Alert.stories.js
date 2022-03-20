@@ -37,6 +37,7 @@ export const Primary = () => {
       >
         click
       </button>
+<<<<<<< HEAD
       <Alert
         open={open}
         closeAlert={closeAlert}
@@ -48,6 +49,9 @@ export const Primary = () => {
       >
         It is a good alert
       </Alert>
+=======
+      <Alert open={open} text={"Hihdewkdfewkfekf"} closeAlert={closeAlert} />
+>>>>>>> 3903af8b78099d2092d300341043d6064dcb53a2
     </div>
   );
 };
