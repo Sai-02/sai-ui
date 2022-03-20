@@ -11,6 +11,12 @@ export const Primary = () => {
   };
   return (
     <div className="">
+      <div
+        className=""
+        style={{
+          height: "100vh",
+        }}
+      ></div>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita,
         magnam suscipit dignissimos exercitationem eius a beatae, nobis velit
@@ -33,10 +39,15 @@ export const Primary = () => {
       </button>
       <Alert
         open={open}
-        text={"It is an alert"}
         closeAlert={closeAlert}
-        type="success"
-      />
+        type="info"
+        duration={2000}
+        iconStyles={{
+          fontSize: "1rem",
+        }}
+      >
+        It is a good alert
+      </Alert>
     </div>
   );
 };

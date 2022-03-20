@@ -7,12 +7,25 @@ import {
   faCircleInfo,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
-const Alert = ({ text, open, customStyles, closeAlert, type, duration }) => {
+import propTypes from "prop-types";
+const Alert = ({
+  children,
+  open,
+  customStyles,
+  closeAlert,
+  type,
+  duration,
+  iconStyles,
+  customIcon,
+}) => {
   useEffect(() => {
     if (open) {
-      setTimeout(() => {
-        closeAlert();
-      }, 2000);
+      setTimeout(
+        () => {
+          closeAlert();
+        },
+        duration ? duration : 2000
+      );
     }
   }, [open]);
   const getBGColor = () => {
@@ -32,30 +45,30 @@ const Alert = ({ text, open, customStyles, closeAlert, type, duration }) => {
   const getIcon = () => {
     if (type === "error")
       return (
-        <div className="sui-error-alert-icon">
+        <div className="sui-error-alert-icon" style={{ ...iconStyles }}>
           <FontAwesomeIcon icon={faCircleExclamation} />
         </div>
       );
     if (type === "warning")
       return (
-        <div className="sui-warning-alert-icon">
+        <div className="sui-warning-alert-icon" style={{ ...iconStyles }}>
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </div>
       );
     if (type === "info")
       return (
-        <div className="sui-info-alert-icon">
+        <div className="sui-info-alert-icon" style={{ ...iconStyles }}>
           <FontAwesomeIcon icon={faCircleInfo} />
         </div>
       );
     if (type === "success")
       return (
-        <div className="sui-success-alert-icon">
+        <div className="sui-success-alert-icon" style={{ ...iconStyles }}>
           <FontAwesomeIcon icon={faCircleCheck} />
         </div>
       );
     return (
-      <div className="sui-error-alert-icon">
+      <div className="sui-error-alert-icon" style={{ ...iconStyles }}>
         <FontAwesomeIcon icon={faCircleExclamation} />
       </div>
     );
@@ -72,11 +85,21 @@ const Alert = ({ text, open, customStyles, closeAlert, type, duration }) => {
           ...customStyles,
         }}
       >
-        {getIcon()}
-        <div className="">{text}</div>
+        {customIcon === undefined ? <> {getIcon()}</> : <>{customIcon}</>}
+        <div className="">{children}</div>
       </div>
     </div>
   );
+};
+Alert.propTypes = {
+  children: propTypes.elementType.isRequired,
+  open: propTypes.bool.isRequired,
+  customStyles: propTypes.object,
+  closeAlert: propTypes.func.isRequired,
+  type: propTypes.string.isRequired,
+  duration: propTypes.number,
+  iconStyles: propTypes.object,
+  customIcon: propTypes.elementType,
 };
 
 export default Alert;
