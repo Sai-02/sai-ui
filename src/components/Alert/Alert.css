@@ -10,7 +10,6 @@
   top: 2rem;
   position: fixed;
   z-index: 999;
-<<<<<<< HEAD
   display: flex;
   gap: 1rem;
   background-color: rgb(243, 226, 226);
@@ -37,8 +36,4 @@
 
 .sui-success-alert-icon {
   color: rgb(47, 126, 50);
-=======
-  background-color: rgb(255, 224, 224);
-  color: rgb(95, 33, 32);
->>>>>>> 3903af8b78099d2092d300341043d6064dcb53a2
 }
