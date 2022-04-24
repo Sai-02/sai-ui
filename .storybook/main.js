@@ -7,6 +7,7 @@ module.exports = {
     "../src/stories/Skeleton.stories.js",
     "../src/stories/Modal.stories.js",
     "../src/stories/Alert.stories.js",
+    "../src/stories/Tooltip.stories.js",
   ],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   framework: "@storybook/react",
