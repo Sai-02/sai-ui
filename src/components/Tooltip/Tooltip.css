@@ -1,0 +1,21 @@
+.sui-tooltip-wrapper {
+  position: relative;
+  display: inline;
+  display: inline-block;
+  max-width: fit-content;
+}
+.sui-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  background-color: gray;
+  color: white;
+  /* width: max-content; */
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+.sui-tooltip-text {
+}
+.sui-tooltip-text:hover + .sui-tooltip {
+  display: flex;
+}
