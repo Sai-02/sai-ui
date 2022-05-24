@@ -1,21 +1,23 @@
 import React from "react";
 import "./Tooltip.css";
-const Tooltip = ({ children, content, position, xDistance,yDistance }) => {
+import propTypes from "prop-types";
+
+const Tooltip = ({ children, content, position, xDistance, yDistance }) => {
   const getToolTipStyles = () => {
     if (position === "" || position == undefined) return {};
     switch (position) {
       case "top":
         return {
-          top: "-10px",
+          top: `-${xDistance}`,
         };
       case "top-left":
         return {
-          top: "-10px",
+          top: `-${xDistance}`,
           left: "-24px",
         };
       case "top-right":
         return {
-          top: "-10px",
+          top: `-${xDistance}`,
           right: "-24px",
         };
       case "left":
@@ -64,5 +66,15 @@ const Tooltip = ({ children, content, position, xDistance,yDistance }) => {
     </span>
   );
 };
-
+Tooltip.propTypes = {
+  children: propTypes.elementType,
+  content: propTypes.elementType,
+  position: propTypes.string,
+  xDistance: propTypes.string,
+  yDistance: propTypes.string,
+};
+Tooltip.defaultProps = {
+  xDistance: "-10px",
+  yDistance: "-10px",
+};
 export default Tooltip;
